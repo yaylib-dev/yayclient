@@ -1,7 +1,7 @@
 {
-    "name": "yay.js",
-    "version": "0.0.27",
-    "description": "Simple and intuitive, yet full featured API wrapper for https://yay.space written in TypeScript/JavaScript.",
+    "name": "@yaylib-dev/yayclient",
+    "version": "0.0.0",
+    "description": "Simple and intuitive, yet full featured API wrapper for https://yay.space written in TypeScript/JavaScript.This is a communuty-maintained fork of yay.js",
     "type": "commonjs",
     "source": "./src/index.ts",
     "main": "./build/index.js",
@@ -19,19 +19,19 @@
         "docs": "typedoc",
         "publish": "yarn build && npm publish --access public"
     },
-    "repository": "https://github.com/ekkx/yay.js",
+    "repository": "https://github.com/yaylib-dev/yayclient",
     "keywords": [
         "yay",
         "api",
         "bot",
         "nanameue"
     ],
-    "author": "ekkx",
+    "author": "yaylib-dev",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/ekkx/yay.js/issues"
+        "url": "https://github.com/yaylib-dev/yayclient/issues"
     },
-    "homepage": "https://github.com/ekkx/yay.js#readme",
+    "homepage": "https://github.com/yaylib-dev/yayclient#readme",
     "files": [
         "build"
     ],
