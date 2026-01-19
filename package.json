@@ -16,8 +16,7 @@
     "scripts": {
         "build": "rimraf ./build && tsc",
         "test": "jest",
-        "docs": "typedoc",
-        "publish": "yarn build && npm publish --access public"
+        "docs": "typedoc"
     },
     "repository": {
         "type": "git",
