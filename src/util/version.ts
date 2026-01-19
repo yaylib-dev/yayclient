@@ -1,1 +1,2 @@
-export const packageVersion = require('../../package.json').version;
+import packageJson from '../../package.json';
+export const packageVersion = packageJson.version;
