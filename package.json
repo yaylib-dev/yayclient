@@ -16,7 +16,12 @@
     "scripts": {
         "build": "rimraf ./build && tsc",
         "test": "jest",
-        "docs": "typedoc"
+        "docs": "typedoc",
+        "version:patch": "yarn version patch && yarn run version:commit && yarn run version:tag",
+        "version:minor": "yarn version minor && yarn run version:commit && yarn run version:tag",
+        "version:major": "yarn version major && yarn run version:commit && yarn run version:tag",
+        "version:tag": "git tag v$(node -p \"require('./package.json').version\")",
+        "version:commit": "git add package.json && git commit -m \"v$(node -p \"require('./package.json').version\")\""
     },
     "repository": {
         "type": "git",
