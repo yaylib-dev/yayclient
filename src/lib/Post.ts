@@ -612,8 +612,6 @@ export class PostAPI {
 
   public getSearchPosts = async (options: {
     keyword: string;
-    postOwnerScope: number;
-    onlyMedia?: boolean;
     fromPostId?: number;
     number?: number;
   }): Promise<PostsResponse> => {
@@ -622,8 +620,6 @@ export class PostAPI {
       route: `v2/posts/search`,
       params: {
         keyword: options.keyword,
-        post_owner_scope: options.postOwnerScope,
-        only_media: options.onlyMedia,
         from_post_id: options.fromPostId,
         number: options.number,
       },
