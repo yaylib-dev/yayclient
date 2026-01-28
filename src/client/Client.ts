@@ -1721,6 +1721,8 @@ export class Client extends BaseClient {
 
   public searchPosts = async (options: {
     keyword: string;
+    postOwnerScope: number;
+    onlyMedia?: boolean;
     fromPostId?: number;
     number?: number;
   }): Promise<PostsResponse> => {
