@@ -1,5 +1,5 @@
 import { BaseClient } from './BaseClient';
-import { ClientOptions } from '../util/Types';
+import { ClientOptions, PostOwnerScope } from '../util/Types';
 import {
   ActiveFollowingsResponse,
   ActivitiesResponse,
@@ -1721,7 +1721,7 @@ export class Client extends BaseClient {
 
   public searchPosts = async (options: {
     keyword: string;
-    postOwnerScope: number;
+    postOwnerScope?: PostOwnerScope;
     onlyMedia?: boolean;
     fromPostId?: number;
     number?: number;

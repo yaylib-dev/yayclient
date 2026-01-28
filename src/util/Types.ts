@@ -147,6 +147,14 @@ export type SearchCriteria = {
   gender?: number;
 };
 
+/**
+ * 検索するポストの投稿者の範囲
+ * - 'following': フォローしているユーザー
+ * - 'followers': フォロワー
+ * - 'mutual_followers': 相互フォロー
+ */
+export type PostOwnerScope = 'following' | 'followers' | 'mutual_followers';
+
 export interface ChannelCommand {
   command?: string;
   identifier?: string;

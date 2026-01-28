@@ -13,6 +13,7 @@ import {
 import { MessageTag, Post, SharedUrl } from '../util/Models';
 import * as util from '../util/Utils';
 import { API_KEY } from '../util/Constants';
+import { PostOwnerScope } from 'util/Types';
 
 /**
  * **投稿API**
@@ -612,7 +613,7 @@ export class PostAPI {
 
   public getSearchPosts = async (options: {
     keyword: string;
-    postOwnerScope: number;
+    postOwnerScope?: PostOwnerScope;
     onlyMedia?: boolean;
     fromPostId?: number;
     number?: number;
