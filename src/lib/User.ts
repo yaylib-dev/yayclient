@@ -99,11 +99,7 @@ export class UserAPI {
   };
 
   public getFollowRecommendations = async (
-    options: {
-      fromTimestamp?: number;
-      number?: number;
-      sources?: string[];
-    } = {},
+    options: { fromTimestamp?: number; number?: number; sources?: string[] } = {},
   ): Promise<FollowRecommendationsResponse> => {
     return await this.base.request({
       method: 'GET',

@@ -516,11 +516,7 @@ export class PostAPI {
   };
 
   public getMyPosts = async (
-    options: {
-      fromPostId?: number;
-      number?: number;
-      includeGroupPost?: boolean;
-    } = {},
+    options: { fromPostId?: number; number?: number; includeGroupPost?: boolean } = {},
   ): Promise<PostsResponse> => {
     return await this.base.request({
       method: 'GET',
@@ -591,12 +587,7 @@ export class PostAPI {
   };
 
   public getRecommendedPosts = async (
-    options: {
-      experimentNum?: number;
-      variantNum?: number;
-      number?: number;
-      saveRecentSearch?: boolean;
-    } = {},
+    options: { experimentNum?: number; variantNum?: number; number?: number; saveRecentSearch?: boolean } = {},
   ): Promise<PostsResponse> => {
     return await this.base.request({
       method: 'GET',

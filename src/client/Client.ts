@@ -1350,11 +1350,7 @@ export class Client extends BaseClient {
   // NotificationAPI
 
   public getNotifications = async (
-    options: {
-      important?: boolean;
-      fromTimestamp?: number;
-      number?: number;
-    } = {},
+    options: { important?: boolean; fromTimestamp?: number; number?: number } = {},
   ): Promise<ActivitiesResponse> => {
     return await this.notificationAPI.getUserActivities(options);
   };
@@ -1672,11 +1668,7 @@ export class Client extends BaseClient {
   };
 
   public getMyPosts = async (
-    options: {
-      fromPostId?: number;
-      number?: number;
-      includeGroupPost?: boolean;
-    } = {},
+    options: { fromPostId?: number; number?: number; includeGroupPost?: boolean } = {},
   ): Promise<PostsResponse> => {
     return await this.postAPI.getMyPosts(options);
   };
@@ -1709,12 +1701,7 @@ export class Client extends BaseClient {
   };
 
   public getRecommendedPosts = async (
-    options: {
-      experimentNum?: number;
-      variantNum?: number;
-      number?: number;
-      saveRecentSearch?: boolean;
-    } = {},
+    options: { experimentNum?: number; variantNum?: number; number?: number; saveRecentSearch?: boolean } = {},
   ): Promise<PostsResponse> => {
     return await this.postAPI.getRecommendedPosts(options);
   };
@@ -1895,11 +1882,7 @@ export class Client extends BaseClient {
   };
 
   public getFollowRecommendations = async (
-    options: {
-      fromTimestamp?: number;
-      number?: number;
-      sources?: string[];
-    } = {},
+    options: { fromTimestamp?: number; number?: number; sources?: string[] } = {},
   ): Promise<FollowRecommendationsResponse> => {
     return await this.userAPI.getFollowRecommendations(options);
   };
