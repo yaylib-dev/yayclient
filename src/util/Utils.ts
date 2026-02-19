@@ -5,6 +5,7 @@ import util from 'util';
 import { API_KEY, API_VERSION_KEY, API_VERSION_NAME, SHARED_KEY } from './Constants';
 import { Attachment, MessageTag } from './Models';
 import { YJSError } from './Errors';
+import { PostType } from 'types/post';
 
 export const getFilenameAndExtension = (filePath: string): { filename: string; extension: string } => {
   const filename: string = path.basename(filePath);
@@ -79,7 +80,7 @@ export const buildMessageTags = (text: string): MessageTag[] => {
 };
 
 /** @ignore */
-export const getPostType = (options: Record<string, any>): string => {
+export const getPostType = (options: Record<string, any>): PostType => {
   if (options.choices) {
     return 'survey';
   } else if (options.sharedUrl) {

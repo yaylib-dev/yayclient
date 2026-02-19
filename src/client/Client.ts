@@ -1,5 +1,5 @@
 import { BaseClient } from './BaseClient';
-import { ClientOptions, PostOwnerScope } from '../util/Types';
+import { ClientOptions } from '../util/Types';
 import {
   ActiveFollowingsResponse,
   ActivitiesResponse,
@@ -68,6 +68,7 @@ import {
 import { GifImageCategory, GroupUser, MessageTag, MuteKeyword, Post, SharedUrl, Walkthrough } from '../util/Models';
 import * as util from '../util/Utils';
 import { objectToSnake } from '../util/CaseConverter';
+import { SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
 
 /**
  * **yay.js - クライアント**
@@ -1706,13 +1707,7 @@ export class Client extends BaseClient {
     return await this.postAPI.getRecommendedPosts(options);
   };
 
-  public searchPosts = async (options: {
-    keyword: string;
-    postOwnerScope?: PostOwnerScope;
-    onlyMedia?: boolean;
-    fromPostId?: number;
-    number?: number;
-  }): Promise<PostsResponse> => {
+  public searchPosts = async (options: SearchPostsRequestOptions): Promise<SearchPostsResponse> => {
     return await this.postAPI.getSearchPosts(options);
   };
 

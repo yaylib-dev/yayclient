@@ -13,7 +13,7 @@ import {
 import { MessageTag, Post, SharedUrl } from '../util/Models';
 import * as util from '../util/Utils';
 import { API_KEY } from '../util/Constants';
-import { PostOwnerScope } from 'util/Types';
+import { SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
 
 /**
  * **投稿API**
@@ -602,13 +602,7 @@ export class PostAPI {
     });
   };
 
-  public getSearchPosts = async (options: {
-    keyword: string;
-    postOwnerScope?: PostOwnerScope;
-    onlyMedia?: boolean;
-    fromPostId?: number;
-    number?: number;
-  }): Promise<PostsResponse> => {
+  public getSearchPosts = async (options: SearchPostsRequestOptions): Promise<SearchPostsResponse> => {
     return await this.base.request({
       method: 'GET',
       route: `v2/posts/search`,
