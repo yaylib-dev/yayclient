@@ -10,10 +10,10 @@ import {
   ValidationPostResponse,
   VoteSurveyResponse,
 } from '../util/Responses';
-import { MessageTag, Post, SharedUrl } from '../util/Models';
+import { MessageTag, SharedUrl } from '../util/Models';
 import * as util from '../util/Utils';
 import { API_KEY } from '../util/Constants';
-import { SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
+import { Post, SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
 
 /**
  * **投稿API**

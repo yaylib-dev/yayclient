@@ -65,10 +65,10 @@ import {
   VipGameRewardUrlResponse,
   VoteSurveyResponse,
 } from '../util/Responses';
-import { GifImageCategory, GroupUser, MessageTag, MuteKeyword, Post, SharedUrl, Walkthrough } from '../util/Models';
+import { GifImageCategory, GroupUser, MessageTag, MuteKeyword, SharedUrl, Walkthrough } from '../util/Models';
 import * as util from '../util/Utils';
 import { objectToSnake } from '../util/CaseConverter';
-import { SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
+import { Post, SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
 
 /**
  * **yay.js - クライアント**

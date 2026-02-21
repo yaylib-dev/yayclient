@@ -1,3 +1,4 @@
+import { Post } from 'types/post';
 import {
   Activity,
   Application,
@@ -20,7 +21,6 @@ import {
   Message,
   MuteKeyword,
   PopularWord,
-  Post,
   PostTag,
   PresignedUrl,
   Promotion,
