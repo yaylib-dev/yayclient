@@ -58,6 +58,10 @@ export class BaseClient extends EventEmitter {
   private waitOnRateLimit: boolean;
   private retryStatuses: number[];
   private intents: string[];
+  private readonly minRequestIntervalMs: number = 1000;
+  private readonly minDelayMs: number = 300;
+  private readonly maxDelayMs: number = 1200;
+  private lastRequestDate: Date = new Date(0);
 
   protected readonly aiPacaAPI: AIPacaAPI;
   protected readonly authAPI: AuthAPI;
@@ -259,6 +263,7 @@ export class BaseClient extends EventEmitter {
 
       options.headers = customHeaders || defaultHeaders;
 
+      await this.insertDelay();
       response = await this.rest.request(options);
 
       // アクセストークンの有効期限が切れたらリフレッシュする
@@ -376,5 +381,13 @@ export class BaseClient extends EventEmitter {
           throw new HTTPError(data as ErrorResponse);
         }
     }
+  };
+
+  private insertDelay = async () => {
+    if (new Date().getTime() - this.lastRequestDate.getTime() < this.minRequestIntervalMs) {
+      const delay = Math.random() * (this.maxDelayMs - this.minDelayMs) + this.minDelayMs;
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
+    this.lastRequestDate = new Date();
   };
 }
