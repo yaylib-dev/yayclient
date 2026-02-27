@@ -10,7 +10,7 @@ import {
   ThreadInfo,
   User,
   Video,
-} from 'util/Models';
+} from '../util/Models';
 
 /**
  * 投稿のタイプ

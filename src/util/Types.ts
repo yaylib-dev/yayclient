@@ -182,19 +182,6 @@ export const GatewayIntents: { [key: string]: string } = {
 };
 
 /**
- * 投稿のタイプ
- */
-export const PostType: { [key: string]: string } = {
-  text: 'text',
-  media: 'media',
-  image: 'image',
-  video: 'video',
-  survey: 'survey',
-  call: 'call',
-  shareableUrl: 'shareable_url',
-};
-
-/**
  * 通話のタイプ
  */
 export const CallType: { [key: string]: string } = {

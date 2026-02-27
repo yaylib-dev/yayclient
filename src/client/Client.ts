@@ -68,7 +68,7 @@ import {
 import { GifImageCategory, GroupUser, MessageTag, MuteKeyword, SharedUrl, Walkthrough } from '../util/Models';
 import * as util from '../util/Utils';
 import { objectToSnake } from '../util/CaseConverter';
-import { Post, SearchPostsRequestOptions, SearchPostsResponse } from 'types/post';
+import { Post, SearchPostsRequestOptions, SearchPostsResponse } from '../types/post';
 
 /**
  * **yay.js - クライアント**
